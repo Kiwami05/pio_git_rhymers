@@ -5,12 +5,20 @@ public class DefaultCountingOutRhymer {
     private static final int MAX_NUMS = 12;
     private final int[] numbers = new int[MAX_NUMS];
 
-    public int getTotal() {
-        return total;
+    public static int getMaxNums() {
+        return MAX_NUMS;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
+    public static int getErrCode() {
+        return ERR_CODE;
+    }
+
+    public static int getStartAmount() {
+        return START_AMOUNT;
+    }
+
+    public int getTotal() {
+        return total;
     }
 
     private static final int ERR_CODE = -1;
@@ -43,4 +51,7 @@ public class DefaultCountingOutRhymer {
         return numbers[total--];
     }
 
+    public int[] getNumbers() {
+        return numbers;
+    }
 }
